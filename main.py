@@ -95,7 +95,7 @@ def main(page: ft.Page):
 
 
     execute_row = ft.Row(controls=[
-        ft.ElevatedButton("Convert!", on_click=execute_convert),
+        ft.ElevatedButton("Convert!", on_click=execute_convert, bgcolor="#0061a4", color="#fefefe"),
         ft.Slider(ref=dpi_slider, min=100, max=900, divisions=10, label="dpi: {value}", value=500)
     ])
     ui_rows.append(execute_row)

@@ -5,6 +5,7 @@
 Require:
 
 + Flet (`pip install flet`)
++ PyMuPDF (`pip install pymupdf`)
 + PyInstaller (`pip install pyinstaller`)
 
 ```
