@@ -95,8 +95,8 @@ def main(page: ft.Page):
 
 
     execute_row = ft.Row(controls=[
-        ft.ElevatedButton("Convert!", on_click=execute_convert, bgcolor="#0061a4", color="#fefefe"),
-        ft.Slider(ref=dpi_slider, min=100, max=900, divisions=10, label="dpi: {value}", value=500)
+        ft.FilledButton("Convert!", on_click=execute_convert),
+        ft.Slider(ref=dpi_slider, min=100, max=900, divisions=10, label="dpi: {value}", value=500),
     ])
     ui_rows.append(execute_row)
 
@@ -105,6 +105,12 @@ def main(page: ft.Page):
     # render page
     ###################################
 
+    ui_rows = [ft.Text(
+        "github.com/AWtnb/pdf_to_img",
+        style="labelSmall",
+        weight="bold",
+        color=ft.colors.BLUE_900,
+    )] + ui_rows
     ui_rows.append(ft.Text(ref=result_message))
     ui_controls = ft.Column(controls=ui_rows)
     page.add(ui_controls)
